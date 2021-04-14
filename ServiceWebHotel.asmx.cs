@@ -23,6 +23,8 @@ namespace ReservationHotelFournisseur
     {
         public List<Hotel> ListeHotel = new List<Hotel>();
         public List<Adresse> ListeAdresse = new List<Adresse>();
+        public List<Chambre> ListeChambre = new List<Chambre>();
+        public List<Categorie> ListeCategorie = new List<Categorie>();
 
 
         [WebMethod]
@@ -86,6 +88,8 @@ namespace ReservationHotelFournisseur
             Response<Hotel> response = new Response<Hotel>();
             List<Hotel> hotelsList = HotelMock.GetHotels();
             List<Adresse> listAdresses = MockAdresse.GetListAdresse();
+            ListeChambre = MockChambre.GetListChambre();
+            ListeCategorie = MockeCategorie.GetListCategories();
             var allHotels = from hotel in hotelsList
                             join adress in listAdresses on hotel.IdHotel equals adress.IdHotel
                             select new { hotel, adress };
@@ -98,8 +102,6 @@ namespace ReservationHotelFournisseur
             {
                 allHotels = allHotels.Where(p => p.hotel.nomHotel.ToLower().Equals(nomHotel.ToLower()));
             }
-
-
 
             foreach (var q in allHotels)
             {

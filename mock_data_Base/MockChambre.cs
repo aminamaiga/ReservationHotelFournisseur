@@ -14,12 +14,12 @@ namespace ReservationHotelFournisseur.mock_data_Base
         {
             ListChambres = new List<Chambre>();
             ListChambres.Add(new Chambre(1, 70, 1, true, 5));
-            ListChambres.Add(new Chambre(1, 100, 1, true, 4));
-            ListChambres.Add(new Chambre(1, 170, 2, true, 4));
-            ListChambres.Add(new Chambre(1, 270, 1, true, 3));
-            ListChambres.Add(new Chambre(1, 400, 1, true, 2));
-            ListChambres.Add(new Chambre(1, 500, 1, true, 1));
-            ListChambres.Add(new Chambre(1, 1000, 2, true, 1));
+            ListChambres.Add(new Chambre(2, 100, 1, true, 4));
+            ListChambres.Add(new Chambre(3, 170, 2, true, 4));
+            ListChambres.Add(new Chambre(4, 270, 1, true, 3));
+            ListChambres.Add(new Chambre(5, 400, 1, true, 2));
+            ListChambres.Add(new Chambre(6, 500, 1, true, 1));
+            ListChambres.Add(new Chambre(7, 1000, 2, true, 1));
             return ListChambres;
         }
 
